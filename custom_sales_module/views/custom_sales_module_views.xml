@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <odoo>
+  <!-- Start of data section -->
   <data>
-        <record id="view_order_form_inherit" model="ir.ui.view">
+    <!-- Define a new record for a view -->
+    <record id="view_order_form_inherit" model="ir.ui.view">
+      <!-- Name of the view -->
       <field name="name">sale.order.form.inherit</field>
+      <!-- Model associated with the view -->
       <field name="model">sale.order</field>
+      <!-- Reference to the view to inherit from -->
       <field name="inherit_id" ref="sale.view_order_form"/>
+      <!-- Customizations to the inherited view -->
       <field name="arch" type="xml">
-                <xpath expr="//sheet/notebook/page[1]/group[field[@name='partner_invoice_id']]" position="after">
+        <!-- Insert a new field after the specified element -->
+        <xpath expr="//sheet/notebook/page[1]/group[field[@name='partner_invoice_id']]" position="after">
+          <!-- New field to be inserted -->
           <field name="delivery_instructions"/>
         </xpath>
       </field>
