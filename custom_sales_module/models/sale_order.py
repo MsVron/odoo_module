@@ -8,5 +8,5 @@ class SaleOrder(models.Model):
         help='Provide any specific instructions for delivery.',
         required=False,
         readonly=False,
-        translate=True,
+        translate=False,
     )
